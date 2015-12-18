@@ -3,6 +3,9 @@ language: go
 go:
   - 1.5.2
 
+env:
+  - "GO15VENDOREXPERIMENT=1"
+
 before_install:
   - wget https://github.com/Masterminds/glide/releases/download/0.8.1/glide-0.8.1-linux-amd64.tar.gz
   - tar xvf glide-0.8.1-linux-amd64.tar.gz
