@@ -1,0 +1,17 @@
+language: go
+go:
+  - 1.5.2
+
+env:
+  - "PATH=/home/travis/gopath/bin:$PATH"
+  - "GLIDE_VERSION=0.8.1"
+
+before_install:
+  - wget https://github.com/Masterminds/glide/releases/download/"$GLIDE_VERSION"/glide-"$GLIDE_VERSION"-linux-amd64.tar.gz
+  - tar xvf glide-"$GLIDE_VERSION"-linux-amd64.tar.gz
+  - cp linux-amd64/glide /home/travis/gopath/bin && rm -rf linux-amd64
+
+script:
+  - glide update
+  - find ./vendor -name '.git' -type d | xargs rm -rf
+  - glide get github.com/bradfitz/iter --update-vendored
