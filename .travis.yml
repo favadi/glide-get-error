@@ -4,7 +4,7 @@ go:
   - 1.5.2
 
 before_install:
-  - https://github.com/Masterminds/glide/releases/download/0.8.1/glide-0.8.1-linux-amd64.tar.gz
+  - wget https://github.com/Masterminds/glide/releases/download/0.8.1/glide-0.8.1-linux-amd64.tar.gz
   - tar xvf glide-0.8.1-linux-amd64.tar.gz
   - cp linux-amd64/glide /home/travis/gopath/bin && rm -rf linux-amd64
 
