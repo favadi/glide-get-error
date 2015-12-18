@@ -8,7 +8,9 @@ before_install:
   - tar xvf glide-0.8.1-linux-amd64.tar.gz
   - cp linux-amd64/glide /home/travis/gopath/bin && rm -rf linux-amd64
 
-script:
+install:
   - glide update
   - find ./vendor -name '.git' -type d | xargs rm -rf
+
+script:
   - glide get github.com/bradfitz/iter --update-vendored
