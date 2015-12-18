@@ -14,7 +14,6 @@ before_install:
 
 install:
   - glide update
-  # - find ./vendor -name '.git' -type d | xargs rm -rf
 
 script:
-  - glide get github.com/bradfitz/iter --update-vendored
+  - glide get github.com/bradfitz/iter
