@@ -1,4 +1,3 @@
 package: .
 import:
- - package: github.com/labstack/echo
-   version: v1.3
+ - package: github.com/cyberdelia/go-metrics-graphite

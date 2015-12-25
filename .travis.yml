@@ -13,8 +13,7 @@ before_install:
   - cp linux-amd64/glide /home/travis/gopath/bin && rm -rf linux-amd64
 
 install:
-  - glide update --update-vendored
-  - find ./vendor -name '.git' -type d | xargs rm -rf
+  - glide update
 
 script:
-  - glide get github.com/bradfitz/iter --update-vendored
+  - cat glide.lock
